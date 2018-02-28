@@ -3,9 +3,9 @@ $(document).ready(function () {
     $('.addSwimLane').on("click", function() {
         let swimlane =
             '<div class="swimlane">' +
-            '<div class="swimlaneTitle">Card Title</div>' +
-            '<button class="addCard">Add Card</button>' +
-            '<button class="removeSwimlane">Remove</button>' +
+                '<div class="swimlaneTitle">Add Swimlane Title</div>' +
+                '<button class="addCard">Add Card</button>' +
+                '<button class="removeSwimlane">Remove</button>' +
             '</div>';
         $('.container').append(swimlane);
     });
@@ -23,8 +23,20 @@ $(document).ready(function () {
         let taskCard =
             '<div class="taskCard">' +
                 '<button class="removeCard">X</button>' +
+                '<div class="cardTitle">Add Card Title</div>' +
+                '<div class="cardDescription">Add Card Description</div>' +
             '</div>';
         $(this).closest('.swimlane').append(taskCard);
+    });
+
+    $('.container').on('click', '.cardTitle', function(){
+        let cardTitle= prompt('What is the card title?');
+        $(this).closest('.cardTitle').text(cardTitle);
+    });
+
+    $('.container').on('click', '.cardDescription', function(){
+        let cardDescription= prompt('What is the card description?');
+        $(this).closest('.cardDescription').text(cardDescription);
     });
 
     $('.container').on('click', '.removeCard', function() {

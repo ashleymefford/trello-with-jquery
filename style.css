@@ -1,10 +1,26 @@
+body {
+    background-color: azure;
+}
+
+.addSwimLane {
+    padding: 5px;
+    border-radius: 5%;
+    margin:10px;
+    color: white;
+    background-color: cornflowerblue;
+    font-size: 16px;
+}
+
+.mainButton {
+    text-align: center;
+}
+
 .container {
     width: 100vw;
     height: 100vh;
     border: 2px solid black;
     background-color: aliceblue;
     display: flex;
-    align-content: center;
 }
 
 .swimlane {
@@ -13,6 +29,12 @@
     border: 1px solid black;
     background-color: lightblue;
     flex-basis: 200px;
+    justify-content: space-around;
+}
+
+.swimlaneTitle{
+    text-align: center;
+    padding: 10px;
 }
 
 h3 {
@@ -23,7 +45,7 @@ h3 {
     padding: 5px;
     background-color: cornflowerblue;
     border: 1px solid black;
-    margin: 10px;
+    margin: 20px;
 }
 
 .taskCard {
@@ -40,4 +62,15 @@ h3 {
     border-radius: 5px;
     margin: 5px;
     float:right;
+}
+
+.cardTitle {
+    text-align: center;
+    text-decoration: underline;
+    padding: 10px; 0px; 20px; 0px;
+}
+
+.cardDescription {
+    font-size: 12px;
+    padding:10px;
 }
